@@ -56,7 +56,6 @@ namespace tech_test_payment_api.Controllers
             if(vendaBanco == null)
                 return NotFound();
 
-            //aguardando pagamento para aprovado
             if(vendaBanco.StatusVenda == EnumStatusVenda.AguardandoPagamento)
             {
                 vendaBanco.StatusVenda = EnumStatusVenda.PagamentoAprovado;
